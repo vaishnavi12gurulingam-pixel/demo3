@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PulseSound | Page not found</title>
+  <meta name="description"
+    content="This page is not on the setlist. Head back to PulseSound home or pick another page.">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('ps-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      var d = localStorage.getItem('ps-dir');
+      if (d) document.documentElement.setAttribute('dir', d);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body class="page-404">
+  <a href="#main" class="sr-only skip-link">Skip to content</a>
+
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="nf" aria-labelledby="nfTitle">
+      <div class="container nf-inner">
+        <div class="nf-visual" aria-hidden="true">
+          <span class="nf-digit">4</span>
+          <span class="nf-disc"><span class="nf-disc-label">PS</span></span>
+          <span class="nf-digit">4</span>
+        </div>
+
+        <span class="kicker">Page not found</span>
+        <h1 class="nf-title" id="nfTitle">This track is <span class="red">not on the setlist</span></h1>
+        <p class="lead">The page you were looking for has moved, or never played here. Try one of these instead.</p>
+
+        <div class="nf-actions">
+          <a href="index.html" class="btn btn-primary">Back to home <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="contact.html" class="btn btn-outline">Book a date</a>
+        </div>
+
+        <ul class="nf-links" aria-label="Other pages">
+          <li><a href="services.html"><i class="fa-solid fa-sliders" aria-hidden="true"></i><span>Services</span><i
+                class="fa-solid fa-arrow-right-long nf-go" aria-hidden="true"></i></a></li>
+          <li><a href="packages.html"><i class="fa-solid fa-ticket" aria-hidden="true"></i><span>Packages</span><i
+                class="fa-solid fa-arrow-right-long nf-go" aria-hidden="true"></i></a></li>
+          <li><a href="about.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>About</span><i
+                class="fa-solid fa-arrow-right-long nf-go" aria-hidden="true"></i></a></li>
+          <li><a href="home-2.html"><i class="fa-solid fa-compact-disc" aria-hidden="true"></i><span>Home 2</span><i
+                class="fa-solid fa-arrow-right-long nf-go" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

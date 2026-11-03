@@ -1,0 +1,119 @@
+/* =========================================================
+   PulseSound - RTL overrides
+   Activated with <html dir="rtl">.
+   Most new layout uses logical properties (margin-inline,
+   inset-inline, text-align: start), so the rules below only
+   cover what logical properties can't: fonts, letter-spacing,
+   directional icons, and LTR-only content such as numbers.
+   ========================================================= */
+
+[dir="rtl"] {
+  --font: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif;
+  --font-display: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+/* Arabic script takes no tracking or uppercase */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4,
+[dir="rtl"] .brand, [dir="rtl"] .now strong, [dir="rtl"] .pkg-item strong,
+[dir="rtl"] .kicker, [dir="rtl"] .btn, [dir="rtl"] .nav-links a,
+[dir="rtl"] .seg button, [dir="rtl"] .pill-btn, [dir="rtl"] .form-group label,
+[dir="rtl"] .tier-meta, [dir="rtl"] .tier-badge, [dir="rtl"] .lab-tag,
+[dir="rtl"] .author strong, [dir="rtl"] .signal-tag, [dir="rtl"] .footer-col h4,
+[dir="rtl"] .sleeve-by, [dir="rtl"] .side-index a, [dir="rtl"] .sleeve-play::after {
+  text-transform: none;
+  letter-spacing: 0;
+}
+[dir="rtl"] .kicker { letter-spacing: .02em; }
+[dir="rtl"] .signal-chips li { letter-spacing: 0; }
+
+/* Keep the title and event name left to right so the hero reads the same */
+[dir="rtl"] .hero-title .line { direction: ltr; text-align: right; }
+
+/* Arrows and carousel chevrons point the way the reader moves */
+[dir="rtl"] .fa-arrow-right-long { transform: scaleX(-1); }
+
+/* Numbers, emails, phones and dates stay left to right */
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="date"],
+[dir="rtl"] input[type="number"] { direction: ltr; text-align: start; }
+[dir="rtl"] .tier-price,
+[dir="rtl"] .eq,
+[dir="rtl"] .lab-sub time { direction: ltr; }
+
+/* Hero (unchanged layout rules) */
+[dir="rtl"] .half-vinyl { left: auto; right: -220px; }
+[dir="rtl"] .side-index { right: auto; left: 1.25rem; }
+[dir="rtl"] .side-index a::before { order: 2; }
+[dir="rtl"] .track-item { border-left: none; border-right: 3px solid transparent; }
+[dir="rtl"] .track-item.active { border-right-color: var(--white); }
+
+/* Process timeline: the route and its fill follow the reading direction on their own (logical properties). Only the wave and the arrows need a note. */
+[dir="rtl"] .process-panel-actions { justify-content: flex-start; }
+
+/* Packages and footer */
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .scroll-progress { transform-origin: right center; }
+[dir="rtl"] .tier-badge { inset-inline-start: auto; inset-inline-end: 2rem; }
+
+/* Testimonial progress bars fill from the reading-start side */
+[dir="rtl"] .track-progress { transform-origin: right center; }
+
+/* Spec rows and the ticker keep their own direction; the row accent grows from the reading start */
+[dir="rtl"] .rig-row::after { transform-origin: right center; }
+
+/* Sections added in v19: Arabic script takes no uppercase or tracking; numbers stay left to right */
+[dir="rtl"] .cta-pill, [dir="rtl"] .cta-link, [dir="rtl"] .dl-pick-text strong,
+[dir="rtl"] .dl-kicker, [dir="rtl"] .dl-title, [dir="rtl"] .dl-ch-name, [dir="rtl"] .stub-title,
+[dir="rtl"] .stub-no, [dir="rtl"] .ticket-step h3 {
+  text-transform: none;
+  letter-spacing: 0;
+}
+[dir="rtl"] .ch-val, [dir="rtl"] .dl-ch-val, [dir="rtl"] .dl-pick-no, [dir="rtl"] .step-no { direction: ltr; }
+
+/* Home 2: Arabic script takes no uppercase or tracking */
+[dir="rtl"] .nav-drop-btn, [dir="rtl"] .h2-badge, [dir="rtl"] .h2-card-tag,
+[dir="rtl"] .h2-card-no, [dir="rtl"] .h2-faq-item summary, [dir="rtl"] .h2-mood-kicker,
+[dir="rtl"] .h2-mood-word, [dir="rtl"] .h2-quote figcaption, [dir="rtl"] .h2-final-title {
+  text-transform: none;
+  letter-spacing: 0;
+}
+[dir="rtl"] .h2-bars span, [dir="rtl"] .h2-disc { direction: ltr; }
+
+/* About page: Arabic script takes no uppercase or tracking */
+[dir="rtl"] .ab-badge, [dir="rtl"] .ab-quote span, [dir="rtl"] .ab-quote blockquote, [dir="rtl"] .ab-final-title { text-transform: none; letter-spacing: 0; }
+[dir="rtl"] .ab-step-no { direction: ltr; }
+
+/* Contact reach-us rows: labels stay in their own case */
+[dir="rtl"] .cr-text strong, [dir="rtl"] .cr-hours-label { text-transform: none; letter-spacing: 0; }
+
+/* Contact coverage: labels keep their case */
+[dir="rtl"] .ca-label, [dir="rtl"] .ca-events li { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .ct-faq .h2-faq-item summary { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .pk-visual .h2-badge { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .pf-label, [dir="rtl"] .pf-control label { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .fd-read, [dir="rtl"] .fd-label, [dir="rtl"] .fd-tiers span { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .fp-label, [dir="rtl"] .fp-badge, [dir="rtl"] .fp-link { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .fp-label, [dir="rtl"] .fp-pick-tag, [dir="rtl"] .fp-cta { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .cb-tag, [dir="rtl"] .cb-btn { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .ad-tag, [dir="rtl"] .ad-link { text-transform: none; letter-spacing: 0; }
+
+[dir="rtl"] .ch-step h3 { text-transform: none; }
+
+
+/* About page (packages-style layout): Arabic badge takes no uppercase or tracking */
+[dir="rtl"] .ab2-visual .h2-badge { text-transform: none; letter-spacing: 0; }
+
+/* Gallery captions: Arabic script takes no uppercase or tracking */
+[dir="rtl"] .gl-tag { text-transform: none; letter-spacing: 0; }
+
+/* The rig (stage plan): Arabic script takes no uppercase or tracking */
+[dir="rtl"] .sp-text strong, [dir="rtl"] .sp-label-tag, [dir="rtl"] .sp-count span, [dir="rtl"] .sp-label { text-transform: none; letter-spacing: 0; }

@@ -1,0 +1,266 @@
+/* =========================================================
+   PulseSound - theme overrides
+   Dark (black) is the default and lives in style.css :root.
+   Light mode is set with <html data-theme="light">.
+   Every text colour is a token, so text stays readable in
+   both themes. The hero, lab and footer stay black in both.
+   ========================================================= */
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-2: #f4f4f2;
+  --surface: #ffffff;
+  --surface-2: #f1f1ef;
+  --panel: #111111;
+  --panel-text: #ffffff;
+  --text: #000000;
+  --muted: #4d4d4d;
+  --line: #dcdcdc;
+  --red-glow: rgba(225, 15, 15, .22);
+}
+
+[data-theme="light"] .site-header { background: rgba(255, 255, 255, .94); }
+[data-theme="light"] .site-header.scrolled { box-shadow: 0 10px 30px -22px rgba(0, 0, 0, .35); }
+[data-theme="light"] .nav-links.open { background: #ffffff; }
+[data-theme="light"] .lab-section::before { opacity: .45; }
+[data-theme="light"] .sleeve,
+[data-theme="light"] .signal-card,
+[data-theme="light"] .process-panel,
+[data-theme="light"] .tier,
+[data-theme="light"] .enquiry-form { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+[data-theme="light"] .tier.featured { box-shadow: 0 34px 70px -30px rgba(225, 15, 15, .55); }
+[data-theme="light"] .tier-badge { background: #000000; }
+[data-theme="light"] .form-control { background: #ffffff; }
+[data-theme="light"] .form-control::placeholder { color: #8a8a8a; }
+[data-theme="light"] .form-group label { color: #4d4d4d; }
+[data-theme="light"] .check-row { color: #4d4d4d; }
+[data-theme="light"] .lead { color: #4d4d4d; }
+[data-theme="light"] .tier-desc,
+[data-theme="light"] .sleeve-genre,
+[data-theme="light"] .tier-meta,
+[data-theme="light"] .author small { color: #4d4d4d; }
+[data-theme="light"] .back-to-top { color: #ffffff; }
+[data-theme="light"] .back-to-top:hover { background: #000000; color: #ffffff; }
+[data-theme="light"] .page-hero p { color: #4d4d4d; }
+[data-theme="light"] .signal-chips li { background: #ffffff; }
+[data-theme="light"] .signal-node { background: #ffffff; }
+[data-theme="light"] .tier.featured .tier-desc,
+[data-theme="light"] .tier.featured .tier-meta { color: rgba(255, 255, 255, .92); }
+
+/* v19 sections: soft lift on light backgrounds */
+[data-theme="light"] .dl-sheet,
+[data-theme="light"] .ticket { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+
+/* Home 2 on light backgrounds */
+[data-theme="light"] .h2-card,
+[data-theme="light"] .h2-tile,
+[data-theme="light"] .h2-quote,
+[data-theme="light"] .h2-form,
+[data-theme="light"] .h2-photo-frame { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+[data-theme="light"] .h2-tile--light { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+[data-theme="light"] .h2-card p, [data-theme="light"] .h2-tile p { color: #4d4d4d; }
+
+/* About page on light backgrounds */
+[data-theme="light"] .ab-member, [data-theme="light"] .ab-step { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+[data-theme="light"] .ab-body, [data-theme="light"] .ab-member p, [data-theme="light"] .ab-step p { color: #4d4d4d; }
+
+/* Contact extra sections on light backgrounds */
+[data-theme="light"] .cdate-chip, [data-theme="light"] .carea-tags span { box-shadow: 0 12px 24px -20px rgba(0, 0, 0, .35); }
+
+[data-theme="light"] .wn-node { box-shadow: 0 0 0 8px var(--bg-2); }
+
+[data-theme="light"] .fp-tier { box-shadow: 0 18px 40px -30px rgba(0, 0, 0, .35); }
+
+/* =========================================================
+   DARK SECTIONS IN LIGHT MODE
+   These sections keep a black or near-black background in
+   both themes, so their text must stay light in light mode.
+   Setting the text tokens on each dark section means every
+   token-based colour inside it switches with it. The rules
+   after that cover the fixed greys and the outline buttons.
+   Light sections are not listed here and keep dark text.
+   ========================================================= */
+[data-theme="light"] :is(
+  .hero,
+  .h2-pulse,
+  .h2-mood,
+  .h2-final,
+  .h2-wall-feature,
+  .lt-stage,
+  .ez-section,
+  .cta-dark,
+  .ticket-stub,
+  .site-footer,
+  .cr-hours
+) {
+  --text: #ffffff;
+  --muted: #c4c4c4;
+  --panel-text: #ffffff;
+  --line: rgba(255, 255, 255, .14);
+  color: #ffffff;
+}
+
+[data-theme="light"] :is(
+  .hero,
+  .h2-pulse,
+  .h2-mood,
+  .h2-final,
+  .h2-wall-feature,
+  .lt-stage,
+  .ez-section,
+  .cta-dark,
+  .ticket-stub,
+  .site-footer,
+  .cr-hours
+) :is(.lead, p, blockquote, figcaption) {
+  color: #c4c4c4;
+}
+
+[data-theme="light"] :is(
+  .hero,
+  .h2-pulse,
+  .h2-mood,
+  .h2-final,
+  .h2-wall-feature,
+  .lt-stage,
+  .ez-section,
+  .cta-dark,
+  .ticket-stub,
+  .site-footer,
+  .cr-hours
+) .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, .7);
+}
+
+[data-theme="light"] :is(
+  .hero,
+  .h2-pulse,
+  .h2-mood,
+  .h2-final,
+  .h2-wall-feature,
+  .lt-stage,
+  .ez-section,
+  .cta-dark,
+  .ticket-stub,
+  .site-footer,
+  .cr-hours
+) .btn-outline:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   About page, Our story: red stage glow behind the headphones
+   (dark mode only, so the black headset stays visible)
+   ========================================================= */
+:root:not([data-theme="light"]) #story .ch-pic {
+  position: relative;
+  isolation: isolate;
+}
+
+:root:not([data-theme="light"]) #story .ch-pic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(225, 15, 15, .62) 0%, rgba(150, 10, 10, .38) 38%, rgba(60, 5, 5, .18) 68%, transparent 100%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 28px);
+  -webkit-mask-image: radial-gradient(circle at 50% 52%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(circle at 50% 52%, #000 45%, transparent 100%);
+}
+
+:root:not([data-theme="light"]) #story .ch-pic img {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, .45)) drop-shadow(0 0 14px rgba(225, 15, 15, .35));
+}
+
+/* =========================================================
+   Dark mode for the sections that were hard-coded light:
+   About "How we work", Packages "Add-ons" (.ad-tint) and the
+   closing booking bands (.cta-light). Light mode is untouched.
+   ========================================================= */
+:root:not([data-theme="light"]) .ad-tint {
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .ad-tint .kicker,
+:root:not([data-theme="light"]) .ad-tint .section-title,
+:root:not([data-theme="light"]) .ad-tint .ad-name,
+:root:not([data-theme="light"]) .ad-tint .ad-link {
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .ad-tint .lead,
+:root:not([data-theme="light"]) .ad-tint .ad-main p {
+  color: var(--muted);
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-link:hover,
+:root:not([data-theme="light"]) .ad-tint .ad-row.is-hot .ad-name {
+  color: var(--red);
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-menu {
+  border-top-color: var(--text);
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-row {
+  border-bottom-color: rgba(255, 255, 255, .18);
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-tag {
+  border-color: rgba(255, 255, 255, .35);
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-row.is-hot .ad-tag {
+  background: var(--red);
+  border-color: var(--red);
+  color: #ffffff;
+}
+
+:root:not([data-theme="light"]) .ad-tint .ad-no,
+:root:not([data-theme="light"]) .ad-tint .ad-ico {
+  color: var(--red);
+}
+
+/* Closing booking bands */
+:root:not([data-theme="light"]) .cta.cta-light {
+  background: var(--bg-2);
+  color: var(--text);
+  border-top-color: var(--line);
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .cta-title {
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .cta-title span {
+  color: var(--red);
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .cta-side p {
+  color: var(--muted);
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .cta-deco {
+  color: var(--red);
+  opacity: .16;
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .btn-black {
+  background: var(--red);
+  color: #ffffff;
+}
+
+:root:not([data-theme="light"]) .cta.cta-light .btn-black:hover {
+  background: #ffffff;
+  color: var(--red);
+}

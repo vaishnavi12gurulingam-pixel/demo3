@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PulseSound | DJ Booking &amp; Sound System Rental</title>
+  <meta name="description"
+    content="Book professional DJs and sound systems for weddings, clubs, corporate events and festivals.">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('ps-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      var d = localStorage.getItem('ps-dir');
+      if (d) document.documentElement.setAttribute('dir', d);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body>
+  <a href="#main" class="sr-only skip-link">Skip to content</a>
+
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ============ HERO (reference: "Summer Days") ============ -->
+    <section class="hero" id="home" aria-label="Featured event">
+
+      <!-- Flowing red waves -->
+      <div class="waves" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+          <path class="w w1" fill="#4a0303"
+            d="M0,700 C360,520 720,820 1080,430 C1260,240 1360,300 1440,260 L1440,900 L0,900 Z" />
+          <path class="w w2" fill="#8a0808"
+            d="M0,760 C380,600 700,880 1100,520 C1270,360 1370,400 1440,380 L1440,900 L0,900 Z" />
+          <path class="w w3" fill="#c20c0c"
+            d="M0,820 C400,700 760,930 1120,600 C1280,460 1380,520 1440,500 L1440,900 L0,900 Z" />
+          <path class="w w4" fill="#e10f0f"
+            d="M0,880 C420,800 800,980 1160,700 C1300,600 1390,650 1440,640 L1440,900 L0,900 Z" />
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+
+        <!-- Left: title and artist -->
+        <div class="hero-left" data-aos="fade-right">
+          <span class="hero-label">Featured event</span>
+          <h1 class="hero-title">
+            <span class="line">Summer</span>
+            <span class="line">Nights</span>
+          </h1>
+          <div class="hero-sub">
+            <p>Feat. DJ booking, sound systems and lighting for weddings, clubs and festivals.</p>
+          </div>
+          <svg class="squiggle" viewBox="0 0 80 20" aria-hidden="true">
+            <path d="M2 10 Q 10 0 18 10 T 34 10 T 50 10 T 66 10 T 78 10" fill="none" stroke="#e10f0f" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+          <p class="hero-artist">PulseSound Crew <small>Artist</small></p>
+          <div class="hero-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+        </div>
+
+        <!-- Center: vinyl and transport -->
+        <div class="hero-center">
+          <div class="vinyl" aria-hidden="true">
+            <div class="label"><span>PS</span></div>
+          </div>
+
+          <div class="transport">
+            <button class="t-btn" type="button" data-step="-1" aria-label="Previous event"><i
+                class="fa-solid fa-backward-step"></i></button>
+            <button class="t-btn play" type="button" id="playToggle" aria-label="Pause"><i
+                class="fa-solid fa-pause"></i></button>
+            <button class="t-btn" type="button" data-step="1" aria-label="Next event"><i
+                class="fa-solid fa-forward-step"></i></button>
+          </div>
+
+          <div class="now">
+            <strong id="nowTitle">Rooftop Wedding</strong>
+            <span id="nowSub">Wedding · 2:14</span>
+          </div>
+
+          <a href="contact.html" class="btn btn-outline">Book this vibe</a>
+        </div>
+
+        <!-- Right: event track list -->
+        <div class="hero-right" data-aos="fade-left" data-aos-delay="150">
+          <ul class="track-list" aria-label="Recent events">
+            <li>
+              <button class="track-item active" type="button" aria-pressed="true" data-title="Rooftop Wedding"
+                data-sub="Wedding · 2:14" style="--grad:#111">
+                <span class="thumb">01</span>
+                <span><strong>Rooftop Wedding</strong><small>Wedding</small></span>
+                <time>2:14</time>
+              </button>
+            </li>
+            <li>
+              <button class="track-item" type="button" aria-pressed="false" data-title="Neon Night"
+                data-sub="Club night · 1:48" style="--grad:#e10f0f">
+                <span class="thumb">02</span>
+                <span><strong>Neon Night</strong><small>Club night</small></span>
+                <time>1:48</time>
+              </button>
+            </li>
+            <li>
+              <button class="track-item" type="button" aria-pressed="false" data-title="Gala Launch"
+                data-sub="Corporate · 1:30" style="--grad:#1c1c1c">
+                <span class="thumb">03</span>
+                <span><strong>Gala Launch</strong><small>Corporate</small></span>
+                <time>1:30</time>
+              </button>
+            </li>
+            <li>
+              <button class="track-item" type="button" aria-pressed="false" data-title="Summer Fest"
+                data-sub="Festival · 3:02" style="--grad:#9e0a0a">
+                <span class="thumb">04</span>
+                <span><strong>Summer Fest</strong><small>Festival</small></span>
+                <time>3:02</time>
+              </button>
+            </li>
+          </ul>
+
+          <div class="track-arrows">
+            <button class="t-btn" type="button" data-step="-1" aria-label="Previous event"><i
+                class="fa-solid fa-chevron-left"></i></button>
+            <button class="t-btn" type="button" data-step="1" aria-label="Next event"><i
+                class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ SOUND LAB (replaces "Hear the difference") ============ -->
+    <section class="section lab-section" id="hear">
+      <div class="container">
+        <header class="section-head head-split" data-aos="fade-up">
+          <span class="kicker">Sound lab</span>
+          <h2 class="section-title">Hear the <span class="red">difference</span></h2>
+          <p class="lead">Every event gets a system tuned to its venue, its crowd and its music. Switch between the
+            PulseSound mix and a standard setup to hear what changes.</p>
+        </header>
+
+        <div class="lab" id="lab" data-mode="pulse" data-aos="fade-up">
+          <div class="lab-top">
+            <div class="lab-now">
+              <div class="lab-cover" id="labCover" style="--grad:#111; --img:url('../images/cover-rooftop-wedding.jpg')"
+                aria-hidden="true"><span id="labNum">01</span></div>
+              <div>
+                <span class="lab-tag">Now playing</span>
+                <strong class="lab-title" id="labTitle">Rooftop Wedding</strong>
+                <span class="lab-sub" id="labSub">PulseSound Crew · Wedding · 2:14</span>
+              </div>
+            </div>
+            <div class="mode-switch" role="group" aria-label="Sound mix">
+              <button type="button" class="pill-btn on" data-mode="pulse" aria-pressed="true">PulseSound</button>
+              <button type="button" class="pill-btn" data-mode="standard" aria-pressed="false">Standard</button>
+            </div>
+          </div>
+
+          <div class="eq" id="eq" aria-hidden="true"></div>
+
+          <div class="lab-controls">
+            <button class="lab-play" id="labPlay" type="button" aria-label="Play" aria-pressed="false"><i
+                class="fa-solid fa-play"></i></button>
+            <p class="lab-note" id="labNote" role="status">PulseSound mix: tuned on site for this venue, this crowd and
+              this music.</p>
+          </div>
+        </div>
+
+        <ul class="sleeves">
+          <li class="sleeve" data-aos="fade-up">
+            <div class="sleeve-cover" style="--grad:#111; --img:url('../images/cover-rooftop-wedding.jpg')"
+              aria-hidden="true">01</div>
+            <div class="sleeve-meta">
+              <h3>Rooftop Wedding</h3>
+              <span class="sleeve-by">PulseSound Crew</span>
+              <span class="sleeve-genre">Wedding · 2:14</span>
+            </div>
+            <button class="sleeve-play" type="button" aria-label="Play Rooftop Wedding" aria-pressed="false"
+              data-title="Rooftop Wedding" data-sub="PulseSound Crew · Wedding · 2:14" data-grad="#111"
+              data-img="../images/cover-rooftop-wedding.jpg" data-num="01">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </li>
+          <li class="sleeve" data-aos="fade-up" data-aos-delay="80">
+            <div class="sleeve-cover" style="--grad:#e10f0f; --img:url('../images/cover-neon-night.jpg')"
+              aria-hidden="true">02</div>
+            <div class="sleeve-meta">
+              <h3>Neon Night</h3>
+              <span class="sleeve-by">Club Crew</span>
+              <span class="sleeve-genre">Club night · 1:48</span>
+            </div>
+            <button class="sleeve-play" type="button" aria-label="Play Neon Night" aria-pressed="false"
+              data-title="Neon Night" data-sub="Club Crew · Club night · 1:48" data-grad="#e10f0f"
+              data-img="../images/cover-neon-night.jpg" data-num="02">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </li>
+          <li class="sleeve" data-aos="fade-up" data-aos-delay="160">
+            <div class="sleeve-cover" style="--grad:#1c1c1c; --img:url('../images/cover-gala-launch.jpg')"
+              aria-hidden="true">03</div>
+            <div class="sleeve-meta">
+              <h3>Gala Launch</h3>
+              <span class="sleeve-by">Corporate Team</span>
+              <span class="sleeve-genre">Corporate · 1:30</span>
+            </div>
+            <button class="sleeve-play" type="button" aria-label="Play Gala Launch" aria-pressed="false"
+              data-title="Gala Launch" data-sub="Corporate Team · Corporate · 1:30" data-grad="#1c1c1c"
+              data-img="../images/cover-gala-launch.jpg" data-num="03">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS (signal path timeline) ============ -->
+    <section class="section section-2 process" id="how">
+      <div class="container">
+        <header class="section-head head-split" data-aos="fade-up">
+          <span class="kicker">Process</span>
+          <h2 class="section-title">Booking made <span class="red">easy</span></h2>
+          <p class="lead">Pick your date, choose a package and we handle the rest, from delivery to teardown.</p>
+        </header>
+
+        <div class="signal" data-signal>
+          <ol class="signal-steps">
+            <li class="signal-step" data-aos="fade-up">
+              <span class="signal-node" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+              <div class="signal-card">
+                <span class="signal-tag">Step 01 &middot; Now</span>
+                <h3>Pick your date and venue</h3>
+                <p>Tell us when and where. We check availability and confirm within 24 hours.</p>
+                <ul class="signal-chips">
+                  <li><i class="fa-solid fa-clock" aria-hidden="true"></i>Confirm in 24h</li>
+                  <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Any venue</li>
+                  <li><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>Date check</li>
+                </ul>
+              </div>
+            </li>
+            <li class="signal-step" data-aos="fade-up" data-aos-delay="120">
+              <span class="signal-node" aria-hidden="true"><i class="fa-solid fa-sliders"></i></span>
+              <div class="signal-card">
+                <span class="signal-tag">Step 02 &middot; This week</span>
+                <h3>Choose a DJ or sound package</h3>
+                <p>Compare the three packages, then add what your event needs: lighting, a stage or a second DJ.</p>
+                <ul class="signal-chips">
+                  <li><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting</li>
+                  <li><i class="fa-solid fa-user-group" aria-hidden="true"></i>Second DJ</li>
+                  <li><i class="fa-solid fa-volume-high" aria-hidden="true"></i>Extra speakers</li>
+                </ul>
+              </div>
+            </li>
+            <li class="signal-step" data-aos="fade-up" data-aos-delay="240">
+              <span class="signal-node" aria-hidden="true"><i class="fa-solid fa-headphones"></i></span>
+              <div class="signal-card">
+                <span class="signal-tag">Step 03 &middot; Event day</span>
+                <h3>We set up and you enjoy</h3>
+                <p>Our crew arrives early, tunes the system to the room and stays on site through teardown.</p>
+                <ul class="signal-chips">
+                  <li><i class="fa-solid fa-clock" aria-hidden="true"></i>Arrives early</li>
+                  <li><i class="fa-solid fa-wave-square" aria-hidden="true"></i>Tuned to the room</li>
+                  <li><i class="fa-solid fa-broom" aria-hidden="true"></i>Full teardown</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="process-panel" data-aos="fade-up">
+          <div class="process-panel-text">
+            <h3>Ready when you are</h3>
+            <p>Reserve your date now and we will send your confirmation within 24 hours.</p>
+          </div>
+          <div class="process-panel-actions">
+            <a href="contact.html" class="btn btn-primary">Start booking <i
+                class="fa-solid fa-arrow-right-long"></i></a>
+            <a href="services.html" class="btn btn-outline">See all services</a>
+          </div>
+          <div class="signal-wave" aria-hidden="true">
+            <span style="--i:0;--h:40"></span>
+            <span style="--i:1;--h:71"></span>
+            <span style="--i:2;--h:93"></span>
+            <span style="--i:3;--h:99"></span>
+            <span style="--i:4;--h:88"></span>
+            <span style="--i:5;--h:62"></span>
+            <span style="--i:6;--h:49"></span>
+            <span style="--i:7;--h:79"></span>
+            <span style="--i:8;--h:97"></span>
+            <span style="--i:9;--h:98"></span>
+            <span style="--i:10;--h:82"></span>
+            <span style="--i:11;--h:53"></span>
+            <span style="--i:12;--h:58"></span>
+            <span style="--i:13;--h:85"></span>
+            <span style="--i:14;--h:99"></span>
+            <span style="--i:15;--h:95"></span>
+            <span style="--i:16;--h:75"></span>
+            <span style="--i:17;--h:44"></span>
+            <span style="--i:18;--h:67"></span>
+            <span style="--i:19;--h:91"></span>
+            <span style="--i:20;--h:99"></span>
+            <span style="--i:21;--h:91"></span>
+            <span style="--i:22;--h:66"></span>
+            <span style="--i:23;--h:45"></span>
+            <span style="--i:24;--h:75"></span>
+            <span style="--i:25;--h:95"></span>
+            <span style="--i:26;--h:99"></span>
+            <span style="--i:27;--h:85"></span>
+            <span style="--i:28;--h:58"></span>
+            <span style="--i:29;--h:54"></span>
+            <span style="--i:30;--h:82"></span>
+            <span style="--i:31;--h:98"></span>
+            <span style="--i:32;--h:96"></span>
+            <span style="--i:33;--h:78"></span>
+            <span style="--i:34;--h:48"></span>
+            <span style="--i:35;--h:63"></span>
+            <span style="--i:36;--h:88"></span>
+            <span style="--i:37;--h:99"></span>
+            <span style="--i:38;--h:93"></span>
+            <span style="--i:39;--h:70"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY (photo wall; image sources are placeholders to swap later) ============ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section-head gl-head head-split" data-aos="fade-up">
+          <span class="kicker">Gallery</span>
+          <h2 class="section-title">Nights we've <span class="red">built</span></h2>
+          <p class="lead">A look at rooms we have set up, from first dances to festival stages.</p>
+        </header>
+
+        <div class="gl-grid">
+          <!-- PLACEHOLDER: replace src with the final image -->
+          <figure class="gl-tile gl-big" data-aos="zoom-in">
+            <img class="gl-img" src="../assets/images/shot-stage.webp" alt="Red stage lights over a crowd at a festival"
+              width="1024" height="1024" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Festivals</span><strong>Stage-scale lighting</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gl-tile" data-aos="zoom-in" data-aos-delay="80">
+            <img class="gl-img" src="../assets/images/cover-rooftop-wedding.jpg"
+              alt="A rooftop wedding reception at dusk" width="800" height="800" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Weddings</span><strong>Rooftop first dance</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gl-tile" data-aos="zoom-in" data-aos-delay="120">
+            <img class="gl-img" src="../assets/images/cover-neon-night.jpg" alt="Guests dancing in a neon-lit room"
+              width="800" height="800" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Club nights</span><strong>Neon after midnight</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gl-tile" data-aos="zoom-in" data-aos-delay="160">
+            <img class="gl-img" src="../assets/images/shot-turntable.webp"
+              alt="Close-up of a black turntable with a red label" width="1024" height="1024" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Decks</span><strong>Pro turntable setup</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gl-tile" data-aos="zoom-in" data-aos-delay="200">
+            <img class="gl-img" src="../assets/images/shot-crew.webp" alt="The PulseSound crew at the mixing desk"
+              width="1024" height="1024" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Crew</span><strong>Our team on site</strong></figcaption>
+          </figure>
+
+          <figure class="gl-tile gl-wide" data-aos="zoom-in" data-aos-delay="240">
+            <img class="gl-img" src="../assets/images/cover-gala-launch.jpg"
+              alt="A product launch event with stage lighting" width="800" height="800" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Launches</span><strong>Gala product launch</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gl-tile gl-wide" data-aos="zoom-in" data-aos-delay="280">
+            <img class="gl-img" src="../assets/images/shot-speakers.webp"
+              alt="Three black speakers sized for different rooms" width="1024" height="1024" loading="lazy">
+            <i class="fa-solid fa-expand gl-expand" aria-hidden="true"></i>
+            <figcaption class="gl-cap"><span class="gl-tag">Sound</span><strong>Speakers sized to the room</strong>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="gl-foot" data-aos="fade-up">
+          <a href="contact.html" class="btn btn-primary">Book a night like this <i
+              class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS (scrolling chapters with a sticky visual) ============ -->
+    <section class="section events" id="events">
+      <div class="container">
+        <header class="section-head head-split" data-aos="fade-up">
+          <span class="kicker">Events</span>
+          <h2 class="section-title">Every room has its own <span class="red">sound</span></h2>
+          <p class="lead">Scroll through the nights we play. The set changes with every room, and so does the crew.</p>
+        </header>
+
+        <div class="events-grid" data-events>
+          <aside class="events-stick" aria-hidden="true">
+            <div class="events-visual">
+              <span class="events-ring" aria-hidden="true"></span>
+              <span class="events-ring" aria-hidden="true"></span>
+              <span class="events-ring" aria-hidden="true"></span>
+              <img class="events-disc" src="../assets/images/vinyl-record-red-label.png" alt="" width="360" height="360"
+                loading="lazy">
+            </div>
+            <div class="events-index" dir="ltr">
+              <span class="events-num" id="eventsNum">01</span>
+              <span class="events-of">/ 04</span>
+            </div>
+            <ol class="events-rail">
+              <li class="is-on"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </aside>
+
+          <div class="events-chapters">
+            <article class="chapter is-active" data-aos="fade-up">
+              <span class="chapter-kicker">Chapter 01</span>
+              <h3 class="chapter-title">Weddings</h3>
+              <p>From the ceremony to the last dance. Clear sound for vows and speeches, then a floor that keeps guests
+                moving until the lights come up.</p>
+              <ul class="chapter-tags">
+                <li><i class="fa-solid fa-microphone" aria-hidden="true"></i>Ceremony mics</li>
+                <li><i class="fa-solid fa-heart" aria-hidden="true"></i>First dance</li>
+                <li><i class="fa-solid fa-music" aria-hidden="true"></i>Dance floor</li>
+              </ul>
+            </article>
+
+            <article class="chapter" data-aos="fade-up">
+              <span class="chapter-kicker">Chapter 02</span>
+              <h3 class="chapter-title">Club nights</h3>
+              <p>Bass you can feel in your chest. A line-array system tuned to the room, with lighting that moves with
+                the drop.</p>
+              <ul class="chapter-tags">
+                <li><i class="fa-solid fa-volume-high" aria-hidden="true"></i>Line array</li>
+                <li><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Club lighting</li>
+                <li><i class="fa-solid fa-headphones" aria-hidden="true"></i>Resident sets</li>
+              </ul>
+            </article>
+
+            <article class="chapter" data-aos="fade-up">
+              <span class="chapter-kicker">Chapter 03</span>
+              <h3 class="chapter-title">Corporate</h3>
+              <p>Clear voices in every seat. Wireless mics, a clean presentation feed and an MC who keeps the programme
+                on time.</p>
+              <ul class="chapter-tags">
+                <li><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>Wireless mics</li>
+                <li><i class="fa-solid fa-display" aria-hidden="true"></i>Presentation feed</li>
+                <li><i class="fa-solid fa-comment" aria-hidden="true"></i>Event MC</li>
+              </ul>
+            </article>
+
+            <article class="chapter" data-aos="fade-up">
+              <span class="chapter-kicker">Chapter 04</span>
+              <h3 class="chapter-title">Festivals</h3>
+              <p>Stages that feel bigger than the field. Full production, an LED wall and a crew with backup for long
+                days in the open air.</p>
+              <ul class="chapter-tags">
+                <li><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i>Full stage</li>
+                <li><i class="fa-solid fa-film" aria-hidden="true"></i>LED wall</li>
+                <li><i class="fa-solid fa-user-group" aria-hidden="true"></i>Crew backup</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS (setlist: tracks and a now-playing panel) ============ -->
+    <section class="section section-2 reviews" id="testimonials">
+      <div class="container">
+        <header class="section-head head-split" data-aos="fade-up">
+          <span class="kicker">Testimonials</span>
+          <h2 class="section-title">What clients <span class="red">say</span></h2>
+          <p class="lead">Three nights, three clients. Pick a track to hear what they said, or let the setlist play on.
+          </p>
+        </header>
+
+        <div class="setlist" data-setlist data-aos="fade-up">
+          <div class="setlist-tracks" role="tablist" aria-label="Client testimonials">
+            <button type="button" class="track is-active" role="tab" id="track-0" aria-selected="true"
+              aria-controls="reviewPanel" tabindex="0" data-name="Ananya M." data-role="Wedding host" data-initials="AM"
+              data-stars="5"
+              data-quote="The sound was perfect from the first song to the last. Our guests did not stop dancing.">
+              <span class="track-no">01</span>
+              <span class="track-info"><strong>Ananya M.</strong><small>Wedding host</small></span>
+              <span class="track-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="track-progress" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="track" role="tab" id="track-1" aria-selected="false"
+              aria-controls="reviewPanel" tabindex="-1" data-name="Rahul K." data-role="Event manager"
+              data-initials="RK" data-stars="5"
+              data-quote="Professional from the first call. They set up early and handled everything.">
+              <span class="track-no">02</span>
+              <span class="track-info"><strong>Rahul K.</strong><small>Event manager</small></span>
+              <span class="track-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="track-progress" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="track" role="tab" id="track-2" aria-selected="false"
+              aria-controls="reviewPanel" tabindex="-1" data-name="Sara L." data-role="Marketing lead"
+              data-initials="SL" data-stars="4"
+              data-quote="Clean sound and great lighting for our launch. Right on schedule.">
+              <span class="track-no">03</span>
+              <span class="track-info"><strong>Sara L.</strong><small>Marketing lead</small></span>
+              <span class="track-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="track-progress" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="setlist-panel" id="reviewPanel" role="tabpanel" aria-labelledby="track-0" aria-live="polite">
+            <i class="fa-solid fa-quote-left panel-mark" aria-hidden="true"></i>
+            <span class="panel-tag"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Now playing</span>
+            <div class="panel-stars" id="reviewStars" aria-label="5 out of 5 stars"></div>
+            <blockquote class="panel-quote">
+              <p id="reviewText"></p>
+            </blockquote>
+            <div class="panel-foot">
+              <div class="panel-author">
+                <span class="panel-avatar" id="reviewAvatar" aria-hidden="true">AM</span>
+                <div><strong id="reviewName"></strong><small id="reviewRole"></small></div>
+              </div>
+              <div class="panel-nav">
+                <button type="button" data-review-step="-1" aria-label="Previous testimonial"><i
+                    class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" data-review-step="1" aria-label="Next testimonial"><i
+                    class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="panel-wave" aria-hidden="true">
+              <span style="--i:0;--h:58"></span>
+              <span style="--i:1;--h:85"></span>
+              <span style="--i:2;--h:94"></span>
+              <span style="--i:3;--h:83"></span>
+              <span style="--i:4;--h:55"></span>
+              <span style="--i:5;--h:50"></span>
+              <span style="--i:6;--h:80"></span>
+              <span style="--i:7;--h:94"></span>
+              <span style="--i:8;--h:88"></span>
+              <span style="--i:9;--h:62"></span>
+              <span style="--i:10;--h:41"></span>
+              <span style="--i:11;--h:74"></span>
+              <span style="--i:12;--h:93"></span>
+              <span style="--i:13;--h:91"></span>
+              <span style="--i:14;--h:70"></span>
+              <span style="--i:15;--h:36"></span>
+              <span style="--i:16;--h:67"></span>
+              <span style="--i:17;--h:90"></span>
+              <span style="--i:18;--h:93"></span>
+              <span style="--i:19;--h:76"></span>
+              <span style="--i:20;--h:44"></span>
+              <span style="--i:21;--h:60"></span>
+              <span style="--i:22;--h:86"></span>
+              <span style="--i:23;--h:94"></span>
+              <span style="--i:24;--h:82"></span>
+              <span style="--i:25;--h:53"></span>
+              <span style="--i:26;--h:52"></span>
+              <span style="--i:27;--h:81"></span>
+              <span style="--i:28;--h:94"></span>
+              <span style="--i:29;--h:87"></span>
+              <span style="--i:30;--h:61"></span>
+              <span style="--i:31;--h:43"></span>
+              <span style="--i:32;--h:75"></span>
+              <span style="--i:33;--h:93"></span>
+              <span style="--i:34;--h:90"></span>
+              <span style="--i:35;--h:68"></span>
+              <span style="--i:36;--h:35"></span>
+              <span style="--i:37;--h:69"></span>
+              <span style="--i:38;--h:91"></span>
+              <span style="--i:39;--h:93"></span>
+              <span style="--i:40;--h:75"></span>
+              <span style="--i:41;--h:42"></span>
+              <span style="--i:42;--h:62"></span>
+              <span style="--i:43;--h:87"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIDE THE RIG (spec sheet) ============ -->
+    <section class="section section-2 rig" id="rig">
+      <div class="container rig-grid">
+        <header class="rig-head" data-aos="fade-right">
+          <span class="kicker">Our gear</span>
+          <h2 class="section-title">Inside the <span class="red">rig</span></h2>
+          <p class="lead">Everything we bring to your event, from the speakers to the spare cables.</p>
+        </header>
+
+        <ol class="rig-list">
+          <li class="rig-row" data-aos="fade-left">
+            <span class="rig-idx">01</span>
+            <span class="rig-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+            <div class="rig-text">
+              <h3>Speakers</h3>
+              <p>Line-array tops and subwoofers, sized to the room and checked before every doors-open.</p>
+            </div>
+          </li>
+          <li class="rig-row" data-aos="fade-left" data-aos-delay="80">
+            <span class="rig-idx">02</span>
+            <span class="rig-ico"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
+            <div class="rig-text">
+              <h3>Decks and mixing</h3>
+              <p>Pro DJ controllers and mixers, with a backup unit on every booking so the music never stops.</p>
+            </div>
+          </li>
+          <li class="rig-row" data-aos="fade-left" data-aos-delay="160">
+            <span class="rig-idx">03</span>
+            <span class="rig-ico"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i></span>
+            <div class="rig-text">
+              <h3>Microphones</h3>
+              <p>Wireless handhelds and headsets for speeches, MCs and the first dance.</p>
+            </div>
+          </li>
+          <li class="rig-row" data-aos="fade-left" data-aos-delay="240">
+            <span class="rig-idx">04</span>
+            <span class="rig-ico"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+            <div class="rig-text">
+              <h3>Lighting</h3>
+              <p>Moving heads, LED bars and a fog machine, programmed to follow the music.</p>
+            </div>
+          </li>
+          <li class="rig-row" data-aos="fade-left" data-aos-delay="320">
+            <span class="rig-idx">05</span>
+            <span class="rig-ico"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+            <div class="rig-text">
+              <h3>Power and backup</h3>
+              <p>Generator-ready power, a spare for every critical item and a crew on site to fix problems fast.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ============ DIAL IN (rig sheet: pick an event, the sheet lists the setup and level per channel) ============ -->
+    <section class="section dial" id="dial">
+      <div class="container">
+        <header class="dial-head head-split" data-aos="fade-up">
+          <span class="kicker">Build your setup</span>
+          <h2 class="section-title">Dial in <span class="red">your night</span></h2>
+          <p class="lead">Pick the kind of event and the rig sheet shows how we would set it up, channel by channel.</p>
+        </header>
+
+        <div class="dl" data-mixer data-aos="fade-up" data-aos-delay="80">
+          <div class="dl-picks" role="group" aria-label="Event type">
+            <button class="dl-pick is-on" type="button" data-event="wedding" aria-pressed="true">
+              <span class="dl-pick-no">01</span>
+              <span class="dl-pick-ico"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+              <span class="dl-pick-text"><strong>Wedding</strong><small>Vows, speeches and the first
+                  dance</small></span>
+              <i class="fa-solid fa-arrow-right-long dl-pick-go" aria-hidden="true"></i>
+            </button>
+            <button class="dl-pick" type="button" data-event="club" aria-pressed="false">
+              <span class="dl-pick-no">02</span>
+              <span class="dl-pick-ico"><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></span>
+              <span class="dl-pick-text"><strong>Club night</strong><small>Bass, haze and light on the
+                  drop</small></span>
+              <i class="fa-solid fa-arrow-right-long dl-pick-go" aria-hidden="true"></i>
+            </button>
+            <button class="dl-pick" type="button" data-event="corporate" aria-pressed="false">
+              <span class="dl-pick-no">03</span>
+              <span class="dl-pick-ico"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+              <span class="dl-pick-text"><strong>Corporate</strong><small>Clear talks and easy background
+                  music</small></span>
+              <i class="fa-solid fa-arrow-right-long dl-pick-go" aria-hidden="true"></i>
+            </button>
+            <button class="dl-pick" type="button" data-event="festival" aria-pressed="false">
+              <span class="dl-pick-no">04</span>
+              <span class="dl-pick-ico"><i class="fa-solid fa-fire" aria-hidden="true"></i></span>
+              <span class="dl-pick-text"><strong>Festival</strong><small>Stage-scale rig for open-air
+                  crowds</small></span>
+              <i class="fa-solid fa-arrow-right-long dl-pick-go" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <article class="dl-sheet">
+            <header class="dl-sheet-head">
+              <span class="dl-kicker"><span class="dl-live" aria-hidden="true"></span>Rig sheet</span>
+              <h3 class="dl-title" data-title aria-live="polite">Wedding</h3>
+            </header>
+
+            <ol class="dl-channels">
+              <li class="dl-ch" data-ch>
+                <span class="dl-ch-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+                <span class="dl-ch-name">PA system</span>
+                <span class="dl-ch-val">60</span>
+                <span class="dl-meter"><span class="dl-meter-fill" style="--level: 60;"></span></span>
+              </li>
+              <li class="dl-ch" data-ch>
+                <span class="dl-ch-ico"><i class="fa-solid fa-compact-disc" aria-hidden="true"></i></span>
+                <span class="dl-ch-name">Decks</span>
+                <span class="dl-ch-val">70</span>
+                <span class="dl-meter"><span class="dl-meter-fill" style="--level: 70;"></span></span>
+              </li>
+              <li class="dl-ch" data-ch>
+                <span class="dl-ch-ico"><i class="fa-solid fa-microphone" aria-hidden="true"></i></span>
+                <span class="dl-ch-name">Microphones</span>
+                <span class="dl-ch-val">95</span>
+                <span class="dl-meter"><span class="dl-meter-fill" style="--level: 95;"></span></span>
+              </li>
+              <li class="dl-ch" data-ch>
+                <span class="dl-ch-ico"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                <span class="dl-ch-name">Lighting</span>
+                <span class="dl-ch-val">55</span>
+                <span class="dl-meter"><span class="dl-meter-fill" style="--level: 55;"></span></span>
+              </li>
+              <li class="dl-ch" data-ch>
+                <span class="dl-ch-ico"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+                <span class="dl-ch-name">Power backup</span>
+                <span class="dl-ch-val">50</span>
+                <span class="dl-meter"><span class="dl-meter-fill" style="--level: 50;"></span></span>
+              </li>
+            </ol>
+
+            <footer class="dl-foot">
+              <p class="dl-note" data-note>Wireless mics for vows and speeches, a soft first-dance mix and warm
+                uplighting.</p>
+              <a href="contact.html" class="btn btn-primary">Request this setup <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE + BOOKING TICKET ============ -->
+    <section class="section section-2 ticket-section" id="reserve">
+      <div class="container reserve-body">
+        <header class="reserve-head head-split" data-aos="fade-up">
+          <span class="kicker">Reserve</span>
+          <h2 class="section-title">Secure your <span class="red">date</span></h2>
+          <p class="lead">Three steps from the first message to the first song.</p>
+        </header>
+
+        <div class="ticket" data-aos="fade-up" data-aos-delay="80">
+          <div class="ticket-stub">
+            <i class="fa-solid fa-ticket ticket-icon" aria-hidden="true"></i>
+            <span class="stub-title">Admit<br>one</span>
+            <span class="stub-no">No. 001</span>
+            <span class="stub-bars" aria-hidden="true"></span>
+          </div>
+
+          <div class="ticket-main">
+            <ol class="ticket-steps">
+              <li class="ticket-step"><span class="step-no">01</span>
+                <div class="step-text">
+                  <h3>Pick your date</h3>
+                  <p>Tell us the day and the hours you need the sound.</p>
+                </div>
+              </li>
+              <li class="ticket-step"><span class="step-no">02</span>
+                <div class="step-text">
+                  <h3>Tell us the room</h3>
+                  <p>Venue size, indoors or outdoors, and the mood you want.</p>
+                </div>
+              </li>
+              <li class="ticket-step"><span class="step-no">03</span>
+                <div class="step-text">
+                  <h3>We bring the sound</h3>
+                  <p>We set up, sound-check and stay until the last song.</p>
+                </div>
+              </li>
+            </ol>
+            <div class="ticket-foot">
+              <a href="contact.html" class="btn btn-primary">Request a date <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IN MOTION (story-style reel viewer) ============ -->
+    <section class="section reels" id="reels">
+      <div class="container rv">
+        <div class="rv-copy" data-aos="fade-right">
+          <span class="kicker">In motion</span>
+          <h2 class="section-title">Watch the <span class="red">night</span></h2>
+          <p class="lead">Short clips from recent nights. Tap the sides of the reel to move between them, or pick a clip
+            below.</p>
+          <ol class="rv-list" aria-label="Clips">
+            <li><button type="button" class="rv-thumb is-active" aria-pressed="true" data-index="0"
+                data-src="../assets/images/reel-1.mp4" data-poster="../assets/images/reel-1-poster.jpg"
+                data-title="Stage and crowd">
+                <img src="../assets/images/reel-1-poster.jpg" alt="" width="540" height="960" loading="lazy">
+                <span><b>01</b>Stage and crowd</span></button></li>
+            <li><button type="button" class="rv-thumb" aria-pressed="false" data-index="1"
+                data-src="../assets/images/reel-2.mp4" data-poster="../assets/images/reel-2-poster.jpg"
+                data-title="DJ at the decks">
+                <img src="../assets/images/reel-2-poster.jpg" alt="" width="540" height="960" loading="lazy">
+                <span><b>02</b>DJ at the decks</span></button></li>
+            <li><button type="button" class="rv-thumb" aria-pressed="false" data-index="2"
+                data-src="../assets/images/reel-3.mp4" data-poster="../assets/images/reel-3-poster.jpg"
+                data-title="Dancefloor energy">
+                <img src="../assets/images/reel-3-poster.jpg" alt="" width="540" height="960" loading="lazy">
+                <span><b>03</b>Dancefloor energy</span></button></li>
+          </ol>
+        </div>
+
+        <div class="rv-stage" data-aos="fade-left" data-aos-delay="100">
+          <div class="rv-phone">
+            <div class="rv-progress" aria-hidden="true">
+              <span class="rv-seg"><i></i></span><span class="rv-seg"><i></i></span><span class="rv-seg"><i></i></span>
+            </div>
+            <div class="rv-top">
+              <span class="rv-avatar" aria-hidden="true">PS</span>
+              <span class="rv-handle">pulsesound</span>
+              <button type="button" class="rv-follow" aria-pressed="false">Follow</button>
+            </div>
+            <video class="rv-video" muted playsinline preload="metadata" poster="../assets/images/reel-1-poster.jpg"
+              aria-label="Stage and crowd">
+              <source src="../assets/images/reel-1.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="rv-zone rv-prev" aria-label="Previous clip"></button>
+            <button type="button" class="rv-zone rv-mid" aria-label="Pause clip"></button>
+            <button type="button" class="rv-zone rv-next" aria-label="Next clip"></button>
+            <div class="rv-caption">
+              <strong id="rvTitle">Stage and crowd</strong>
+              <a href="contact.html" class="rv-book">Book a night like this <i class="fa-solid fa-arrow-right-long"
+                  aria-hidden="true"></i></a>
+            </div>
+            <div class="rv-side">
+              <button type="button" class="rv-action rv-like" aria-pressed="false" aria-label="Like"><i
+                  class="fa-solid fa-heart" aria-hidden="true"></i></button>
+              <button type="button" class="rv-action rv-share" aria-label="Share"><i class="fa-solid fa-paper-plane"
+                  aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA (last section, redesigned) ============ -->
+    <section class="cta cta-dark" id="book">
+      <i class="fa-solid fa-compact-disc cta-deco" aria-hidden="true"></i>
+      <div class="cta-bars" aria-hidden="true">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+        <span style="--i: 4;"></span>
+        <span style="--i: 5;"></span>
+        <span style="--i: 6;"></span>
+        <span style="--i: 7;"></span>
+        <span style="--i: 8;"></span>
+        <span style="--i: 9;"></span>
+        <span style="--i: 10;"></span>
+        <span style="--i: 11;"></span>
+        <span style="--i: 12;"></span>
+        <span style="--i: 13;"></span>
+        <span style="--i: 14;"></span>
+        <span style="--i: 15;"></span>
+        <span style="--i: 16;"></span>
+        <span style="--i: 17;"></span>
+        <span style="--i: 18;"></span>
+        <span style="--i: 19;"></span>
+        <span style="--i: 20;"></span>
+        <span style="--i: 21;"></span>
+        <span style="--i: 22;"></span>
+        <span style="--i: 23;"></span>
+      </div>
+      <div class="container cta-inner" data-aos="fade-up">
+        <div class="cta-main">
+          <span class="cta-pill"><span class="cta-dot" aria-hidden="true"></span>Weekends filling up</span>
+          <h2 class="cta-title">Book your <span>night.</span></h2>
+        </div>
+        <div class="cta-side">
+          <p>Weekends go fast. Reserve your date before someone else does.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-black">Book now <i class="fa-solid fa-arrow-right-long"></i></a>
+            <a href="packages.html" class="cta-link">See packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact | PulseSound | Event Date Enquiry</title>
+  <meta name="description"
+    content="Check your event date and get a sound and DJ setup for your room. We reply within 24 hours.">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var t = localStorage.getItem('ps-theme'); if (t) document.documentElement.setAttribute('data-theme', t);
+      var d = localStorage.getItem('ps-dir'); if (d) document.documentElement.setAttribute('dir', d);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body>
+  <a href="#main" class="sr-only skip-link">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="h2-hero ct-hero" aria-label="Contact introduction">
+      <div class="h2-hero-slash" aria-hidden="true"></div>
+      <div class="container h2-hero-inner">
+        <div class="h2-hero-copy" data-aos="fade-right">
+          <span class="kicker">Enquire</span>
+          <h1 class="h2-title">Let's <span class="h2-outline">lock</span> the date.</h1>
+          <p class="lead">Tell us the day, the room and the feeling you want. We reply within 24 hours with a sound and
+            DJ setup built for your night.</p>
+          <div class="h2-actions">
+            <a href="#enquiry" class="btn btn-primary">Send an enquiry <i class="fa-solid fa-arrow-right-long"></i></a>
+            <a href="#next-steps" class="btn btn-outline">How it works</a>
+          </div>
+          <ul class="ct-chips">
+            <li><i class="fa-solid fa-clock" aria-hidden="true"></i> Reply in 24 hours</li>
+            <li><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Backup gear every time</li>
+            <li><i class="fa-solid fa-sliders" aria-hidden="true"></i> Setup for your room</li>
+          </ul>
+        </div>
+        <div class="h2-hero-visual" data-aos="fade-left" data-aos-delay="120">
+          <i class="fa-solid fa-compact-disc h2-disc" aria-hidden="true"></i>
+          <div class="h2-photo-frame">
+            <img class="h2-photo" src="../assets/images/hero-contact.webp" alt="Stacked vinyl records with red centres"
+              width="1283" height="1226">
+          </div>
+          <span class="h2-badge"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i>Weekends go fast</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enquiry">
+      <div class="container contact-grid">
+
+        <aside class="contact-side" data-aos="fade-right">
+          <h2 class="contact-h">Talk to the team</h2>
+          <ul class="contact-points">
+            <li><span class="cp-ico"><i class="fa-solid fa-calendar-check"></i></span>
+              <div><strong>Check your date</strong><small>Tell us the day and hours and we will confirm
+                  availability.</small></div>
+            </li>
+            <li><span class="cp-ico"><i class="fa-solid fa-sliders"></i></span>
+              <div><strong>Get the right setup</strong><small>DJ, sound and lighting planned for your room and guest
+                  count.</small></div>
+            </li>
+            <li><span class="cp-ico"><i class="fa-solid fa-clock"></i></span>
+              <div><strong>Reply in 24 hours</strong><small>Our team replies on weekdays and weekends.</small></div>
+            </li>
+          </ul>
+          <div class="contact-direct">
+            <a href="mailto:hello@pulsesound.example"><i class="fa-solid fa-envelope"></i> hello@pulsesound.example</a>
+            <a href="tel:+10000000000"><i class="fa-solid fa-phone"></i> +1 (000) 000-0000</a>
+          </div>
+        </aside>
+
+        <form class="enquiry-form" data-validate novalidate data-aos="fade-left" aria-describedby="formIntro">
+          <p id="formIntro" class="form-intro">Fields marked <span class="req">*</span> are required.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cName">Full name <span class="req">*</span></label>
+              <input class="form-control" type="text" id="cName" name="name" placeholder="Your name" required
+                data-min-length="2" data-msg-required="Please enter your name.">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email <span class="req">*</span></label>
+              <input class="form-control" type="email" id="cEmail" name="email" placeholder="name@example.com" required
+                data-msg-required="Please enter your email address.">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cPhone">Phone</label>
+              <input class="form-control" type="tel" id="cPhone" name="phone" placeholder="+1 000 000 0000">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cDate">Event date <span class="req">*</span></label>
+              <input class="form-control" type="date" id="cDate" name="date" required
+                data-msg-required="Please choose your event date.">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cStart">Start time</label>
+              <input class="form-control" type="time" id="cStart" name="start">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cHours">Hours needed</label>
+              <input class="form-control" type="number" id="cHours" name="hours" min="1" max="24" placeholder="e.g. 4">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cType">Event type <span class="req">*</span></label>
+              <select class="form-control" id="cType" name="type" required
+                data-msg-required="Please choose an event type.">
+                <option value="">Choose one</option>
+                <option>Wedding</option>
+                <option>Club night</option>
+                <option>Corporate</option>
+                <option>Festival</option>
+                <option>Private party</option>
+                <option>Launch</option>
+                <option>Other</option>
+              </select>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cGuests">Guests</label>
+              <input class="form-control" type="number" id="cGuests" name="guests" min="1" max="5000"
+                placeholder="e.g. 120">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cVenue">Venue</label>
+              <input class="form-control" type="text" id="cVenue" name="venue" placeholder="Name or area">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+              <label for="cService">What do you need?</label>
+              <select class="form-control" id="cService" name="service">
+                <option value="">Not sure yet</option>
+                <option>DJ only</option>
+                <option>Sound system rental</option>
+                <option>DJ and sound</option>
+                <option>DJ, sound and lighting</option>
+              </select>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="form-group full">
+              <label for="cMessage">Tell us about the room</label>
+              <textarea class="form-control" id="cMessage" name="message" rows="4"
+                placeholder="Indoors or outdoors, the vibe you want, anything we should know"></textarea>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Send enquiry <i
+              class="fa-solid fa-paper-plane"></i></button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <!-- 2. WHAT HAPPENS NEXT -->
+    <section class="section section-2" id="next-steps">
+      <div class="container">
+        <header class="h2-head head-split" data-aos="fade-up">
+          <span class="kicker">What happens next</span>
+          <h2 class="section-title">From enquiry to <span class="red">confirmed</span></h2>
+          <p class="lead">Three simple steps, and you always know what comes next.</p>
+        </header>
+        <ol class="wn-track">
+          <li class="wn-step" data-aos="fade-up">
+            <span class="wn-node"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i></span>
+            <div class="wn-card"><span class="wn-stage">Step 01</span>
+              <h3>We reply</h3>
+              <p>Within 24 hours we confirm the date and suggest a setup for your room.</p>
+            </div>
+          </li>
+          <li class="wn-step" data-aos="fade-up" data-aos-delay="120">
+            <span class="wn-node"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+            <div class="wn-card"><span class="wn-stage">Step 02</span>
+              <h3>Quick call</h3>
+              <p>A short call to talk through the music, the timeline and any special requests.</p>
+            </div>
+          </li>
+          <li class="wn-step" data-aos="fade-up" data-aos-delay="240">
+            <span class="wn-node"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></span>
+            <div class="wn-card"><span class="wn-stage">Step 03</span>
+              <h3>Your night is set</h3>
+              <p>We send a written plan for the rig, the crew and the schedule on the day.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. REACH US DIRECTLY -->
+    <section class="section" id="channels">
+      <div class="container cr-grid">
+        <header class="cr-side" data-aos="fade-right">
+          <span class="kicker">Reach us directly</span>
+          <h2 class="section-title">Prefer a <span class="red">message</span>?</h2>
+          <p class="lead">Pick the channel that suits you. Every message gets a human reply.</p>
+          <div class="cr-hours">
+            <span class="cr-hours-label"><i class="fa-solid fa-clock" aria-hidden="true"></i> Open every day</span>
+            <strong class="cr-hours-time">9:00 <em>to</em> 22:00</strong>
+          </div>
+        </header>
+
+        <ul class="cr-list">
+          <li data-aos="fade-left">
+            <a class="cr-row" href="mailto:hello@pulsesound.example">
+              <span class="cr-idx">01</span>
+              <span class="cr-ico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+              <span class="cr-text"><strong>Email us</strong><small>hello@pulsesound.example</small></span>
+              <i class="fa-solid fa-arrow-right-long cr-go" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li data-aos="fade-left" data-aos-delay="80">
+            <a class="cr-row" href="tel:+10000000000">
+              <span class="cr-idx">02</span>
+              <span class="cr-ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+              <span class="cr-text"><strong>Call the team</strong><small>+1 (000) 000-0000</small></span>
+              <i class="fa-solid fa-arrow-right-long cr-go" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li data-aos="fade-left" data-aos-delay="160">
+            <a class="cr-row" href="#">
+              <span class="cr-idx">03</span>
+              <span class="cr-ico"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+              <span class="cr-text"><strong>WhatsApp</strong><small>Send your date and room size</small></span>
+              <i class="fa-solid fa-arrow-right-long cr-go" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. WHERE WE PLAY -->
+    <section class="section section-2" id="area">
+      <div class="container ca-grid">
+        <div class="ca-copy" data-aos="fade-right">
+          <span class="kicker">Where we play</span>
+          <h2 class="section-title">Your venue, <span class="red">our rig</span></h2>
+          <p class="lead">We travel to venues across the region. Add the location to your enquiry and we will plan the
+            setup and travel for it.</p>
+          <ul class="ca-events">
+            <li><span class="ca-n">01</span><i class="fa-solid fa-heart" aria-hidden="true"></i><span>Weddings</span>
+            </li>
+            <li><span class="ca-n">02</span><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i><span>Club
+                nights</span></li>
+            <li><span class="ca-n">03</span><i class="fa-solid fa-building"
+                aria-hidden="true"></i><span>Corporate</span></li>
+            <li><span class="ca-n">04</span><i class="fa-solid fa-music" aria-hidden="true"></i><span>Festivals</span>
+            </li>
+            <li><span class="ca-n">05</span><i class="fa-solid fa-cake-candles" aria-hidden="true"></i><span>Private
+                parties</span></li>
+            <li><span class="ca-n">06</span><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Launches</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ca-radar" data-aos="fade-left" data-aos-delay="100" aria-hidden="true">
+          <span class="ca-ring r1"></span>
+          <span class="ca-ring r2"></span>
+          <span class="ca-ring r3"></span>
+          <span class="ca-sweep"></span>
+          <span class="ca-dot d1"></span>
+          <span class="ca-dot d2"></span>
+          <span class="ca-dot d3"></span>
+          <span class="ca-dot d4"></span>
+          <span class="ca-center"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="ca-label">We travel to you</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BOOKING FAQ -->
+    <section class="section ct-faq" id="faq">
+      <div class="container h2-faq-grid">
+        <header class="h2-head" data-aos="fade-right">
+          <span class="kicker">Booking questions</span>
+          <h2 class="section-title">Before you <span class="red">enquire</span></h2>
+          <p class="lead">Answers to the questions we hear most often.</p>
+        </header>
+        <div class="h2-faq-list" data-aos="fade-left">
+          <details class="h2-faq-item" open>
+            <summary><span>How soon will I hear back?</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </summary>
+            <p>Within 24 hours, on weekdays and weekends.</p>
+          </details>
+          <details class="h2-faq-item">
+            <summary><span>Can I change my date after enquiring?</span><i class="fa-solid fa-plus"
+                aria-hidden="true"></i></summary>
+            <p>Yes. Tell us the new date and we will check availability for you.</p>
+          </details>
+          <details class="h2-faq-item">
+            <summary><span>Do you need access to the venue early?</span><i class="fa-solid fa-plus"
+                aria-hidden="true"></i></summary>
+            <p>For full rigs we ask for early access to set up and sound-check before doors open.</p>
+          </details>
+          <details class="h2-faq-item">
+            <summary><span>What should I send with my enquiry?</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </summary>
+            <p>The date, the hours, the guest count and the room. Photos or a floor plan help too.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
